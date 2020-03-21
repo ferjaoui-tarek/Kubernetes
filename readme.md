@@ -52,14 +52,14 @@
    ```sh 
     kops create cluster --cloud=aws --zones=ap-southeast-1b --name=dev.k8s.trkfrk.in --dns-zone=trkfrk.in --dns private
     ```
+1. Update your master instance group (change instance type c4.large ==> t2.micro)   
+    ```sh 
+      kops edit ig --name=dev.k8s.trkfrk.in master-ap-southeast-1b
+     ```     
 1. Create kubernetes cluser
     ```sh 
       kops update cluster dev.k8s.trkfrk.in --yes
      ```
-1. Update your master instance group (change instance type c4.large ==> t2.micro)   
-    ```sh 
-      kops edit ig --name=dev.k8s.trkfrk.in master-ap-southeast-1b
-     ```    
 1. Validate your cluster 
      ```sh 
       kops validate cluster
