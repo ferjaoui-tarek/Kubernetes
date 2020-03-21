@@ -23,6 +23,7 @@
     ```
 1. Attach IAM role to ubuntu server
    ```
+   check your instance --> action --> instance settings --> attache/replace IAM role
    ```
     #### Note: If you create IAM user with programmatic access then provide Access keys. 
    ```sh 
